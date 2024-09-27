@@ -8,6 +8,39 @@
         <img src="{{ product.image.url }}" class="rounded-xl">
     </div>
 
-  
+    <div class="col-span-2 p-6 bg-gray-100 rounded-xl">
+        <h1 class="mb-6 text-3xl">{{ product.name }}</h1>
+        <p class="text-gray-500"><strong>Price </strong>{{ product.price }}</p>
+        <p class="text-gray-500"><strong>Seller </strong>{{ product.created_by.username }}</p>
+        
+        {% if product.description %}
+            <p class="text-gray-500">
+                <strong class="text-gray-500">Description:</strong><br>
+                {{ product.description }}
+            </p>
+        {% endif %}
+
+        <a href="#" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Contact Seller</a>
+    </div>      
+</div>
+<div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
+    <h2 class="mb-12 text-2xl text-center">Related Products</h2>
+    
+    <div class="grid grid-cols-3 gap=3">
+        {% for products in related_products %}
+            <div>
+                <a href="{% url 'products:detail' products.id %}">
+                    <div>
+                        <img src="{{ products.image.url }}" class="rounded=t=l">  
+                    </div>
+
+                    <div class="p-4 bg-white rounded-b-xl">
+                        <h2 class="text-2xl">{{ products.name }}</h2>
+                        <p class="text-gray-500">Price: {{ products.price }}</p>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
