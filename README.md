@@ -1,4 +1,3 @@
-AFRIGEM
 This E-commerce API using Django and Django REST Framework serves as the backend for managing products on the e-commerce platform, allowing users to create, update, delete, and view products. 
 
 
