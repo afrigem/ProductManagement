@@ -34,7 +34,6 @@ class EditProductForm(forms.ModelForm):
     class Meta:
         model = Product 
         fields = ('name', 'description', 'price', 'image', 'stock')
-
         widgets = {
             'name': forms.TextInput(attrs={
                 'class': INPUT_CLASSES
@@ -47,8 +46,5 @@ class EditProductForm(forms.ModelForm):
             }),
             'image': forms.FileInput(attrs={
                 'class': INPUT_CLASSES
-            }),
-            'stock': forms.TextInput(attrs={
-                'class': INPUT_CLASSES
-            }),
+            })
         }

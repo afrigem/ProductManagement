@@ -33,17 +33,17 @@ def new(request):
 
 @login_required
 def edit(request, pk):
-    products = get_object_or_404(Product, pk=pk, created_by=request.user)
+    product = get_object_or_404(Product, pk=pk, created_by=request.user)
     
     if request.method == 'POST':
-        form = EditProductForm(request.POST, request.FILES, instance=Product)
+        form = EditProductForm(request.POST, request.FILES, instance=product)
 
         if form.is_valid():
             form.save()
 
-            return redirect('products:detail', pk=Product.id)
+            return redirect('products:detail', pk=product.id)
     else:   
-        form = EditProductForm(instance=products)
+        form = EditProductForm(instance=Product)
 
     return render(request, 'products/form.html', {
         'form': form,
