@@ -26,7 +26,7 @@ def new(request):
     else:   
         form = NewProductForm()
 
-    return render(request, 'product/form.html', {
+    return render(request, 'products/form.html', {
         'form': form,
         'title': 'New Product', 
     })
