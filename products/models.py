@@ -22,5 +22,6 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     created_by = models.ForeignKey(User, related_name='products', on_delete=models.CASCADE)
 
+
     def __str__(self):
         return self.name

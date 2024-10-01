@@ -1,7 +1,29 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from .models import Product
+from .models import Product, Category
 from .forms import NewProductForm, EditProductForm
+
+
+def browse(request):
+    query = request.GET.get('query', '')
+    category_id = request.GET.get('category', 0)
+    categories = Category.objects.all()
+    products = Product.objects.all()
+
+    if category_id:
+        products = products.filter(category_id=category_id)
+
+    if query:
+        products = products.filter(name__icontains=query)
+
+    return render (request, 'products/browse.html', {
+        'products': products,
+        'query': query, 
+        'categories': categories, 
+        'category_id': int(category_id)
+
+    })
+
 
 def detail(request, pk):
     product = get_object_or_404(Product, pk=pk)
