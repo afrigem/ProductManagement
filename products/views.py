@@ -11,7 +11,7 @@ def browse(request):
     products = Product.objects.all()
 
     if category_id:
-        products = products.filter(category_id=category_id)
+        products = products.filter(category_id=category_id) 
 
     if query:
         products = products.filter(name__icontains=query)
