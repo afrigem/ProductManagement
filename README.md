@@ -1,4 +1,5 @@
-This E-commerce API using Django and Django REST Framework serves as the backend for managing products on the e-commerce platform, allowing users to create, update, delete, and view products. 
+This Django E-commerce platform is a marketplace for connecting beauty brands and dermatologists to consumers. 
+The API is developed using Django REST Framework serving as the backend for managing products on the e-commerce platform, allowing users to create, update, delete, and view products. 
 
 
 A.	FUNCTIONAL REQUIREMENTS:
@@ -42,10 +43,14 @@ RESTful principles by using appropriate HTTP methods (GET, POST, PUT, DELETE).
 Proper error handling, returning appropriate HTTP status codes for various actions (e.g., 404 for not found, 400 for bad request).
 
 DEPLOYMENT:
-Deploy the API and make API accessible, stable, and secure.
+API accessible, stable, and secure.
 
 
 C.  FUTURE GOALS 
+
+Artificial Intelligence: Integrate machine learning for image recognition and product recommendation system.  
+
+Dermatologists dashboard: Gain access to customer AI analysis reports and provide virtual consultations to clients.
 
 Product Reviews: To allow users to submit reviews and ratings for products and an endpoint to retrieve product reviews.
 
