@@ -3,6 +3,7 @@ The API is developed using Django REST Framework serving as the backend for mana
 
 
 A.	FUNCTIONALITIES 
+
 PRODUCT MANAGEMENT (CRUD):
 Users have the ability to Create, Read, Update, and Delete (CRUD) products.
 Each product has the following attributes: Name, Description, Price, Category, Stock Quantity, Image, and Created By and Created Date.
