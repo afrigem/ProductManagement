@@ -1,5 +1,4 @@
-This Django E-commerce platform is a marketplace for connecting beauty brands to consumers. 
-The API is developed using Django REST Framework serving as the backend for managing products on the e-commerce platform, allowing users to create, update, delete, and view products. 
+This Product Managment API is developed using Django REST Framework serving as the backend for managing products on the e-commerce platform, allowing users to create, update, delete, and view products. 
 
 
 A.	FUNCTIONALITIES 
