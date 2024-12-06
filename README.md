@@ -1,4 +1,4 @@
-This Product Managment API is developed using Django REST Framework serving as the backend for managing products on the e-commerce platform, allowing users to create, update, delete, and view products. 
+This Product Managment service is developed using Django REST Framework for managing products on the e-commerce platform, allowing brands to create, update, delete, and view products. n
 
 
 A.	FUNCTIONALITIES 
@@ -41,18 +41,25 @@ Django Rest Framework (DRF) used to design and expose API endpoints.
 RESTful principles by using appropriate HTTP methods (GET, POST, PUT, DELETE).
 Proper error handling, returning appropriate HTTP status codes for various actions (e.g., 404 for not found, 400 for bad request).
 
-DEPLOYMENT:
-Project deployed on https://torddey.pythonanywhere.com/.
 
+C. HOW TO RUN
+Ensure you have the latest Python version installed
 
-C.  FUTURE GOALS 
+  1. Navigate to project directory
+     
+  3. Create virtual environment
+     >>> python -m venv <virtualenvname>
+     
+  4. Activate virtual environment
+     >>> virtualenvname\scripts\activate
+     
+  6. Install Requirements
+     >>> pip install -r requirements.txt
 
-Product Reviews: To allow users to submit reviews and ratings for products and an endpoint to retrieve product reviews.
+  7. Run migrations
+     >>> python manage.py migrate
+     
+  7. Start Server
+     >>> python manage.py runserver
 
-Wishlist: Add a feature where users can add products to a wishlist, with endpoints to manage this functionality.
-
-Stock Management: Implement an automatic stock reduction system when a user “purchases” a product (or mark it as reserved).
-
-Discounts and Promotions functionality for users to create promotional discounts on certain products, applying price reductions accordingly.
-
-AI Models: To provide analysis and recommendation capabilities.
+  8. Visit link
