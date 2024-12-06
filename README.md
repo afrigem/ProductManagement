@@ -48,18 +48,18 @@ Ensure you have the latest Python version installed
   1. Navigate to project directory
      
   3. Create virtual environment
-     >>> python -m venv <virtualenvname>
+    python -m venv <virtualenvname>
      
   4. Activate virtual environment
-     >>> virtualenvname\scripts\activate
+    virtualenvname\scripts\activate
      
   6. Install Requirements
-     >>> pip install -r requirements.txt
+    pip install -r requirements.txt
 
   7. Run migrations
-     >>> python manage.py migrate
+    python manage.py migrate
      
   7. Start Server
-     >>> python manage.py runserver
+    python manage.py runserver
 
   8. Visit link
